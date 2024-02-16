@@ -12,3 +12,9 @@
     --color-black: #202024;
     --color-white: #FFFFFF;
 }
+
+body {
+    font-family: 'mulish', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
