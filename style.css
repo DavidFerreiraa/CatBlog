@@ -13,6 +13,10 @@
     --color-white: #FFFFFF;
 }
 
+html, body, input {
+    font-family: 'mulish', sans-serif;
+}
+
 body {
     font-family: 'mulish', sans-serif;
     font-weight: 400;
@@ -21,16 +25,33 @@ body {
 
 #app {
     display: grid;
+    width: 100vw;
     grid-template-areas: 
-    "header header header"
-    "main main aside"
-    "main main aside"
-    "footer footer footer"
+    "header"
+    "main"
+    "aside"
+    "footer"
     ;
 }
 
 header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
     grid-area: header;
+
+    padding: 1.6rem 2.8rem;
+
+    background-color: var(--color-blue-700);
+}
+
+header img {
+    max-width: 4rem;
+    max-height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 main {
@@ -43,4 +64,35 @@ aside {
 
 footer {
     grid-area: footer;
+}
+
+.input-wrapper label {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.input-wrapper input {
+    max-width: 24rem;
+    max-height: 4rem;
+
+    background-color: var(--color-blue-300);
+
+    border: none;
+    border-radius: .4rem;
+
+    padding: 1.2rem 1.4rem;
+}
+
+.input-wrapper input::placeholder {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--color-white);
+}
+
+@media (max-width: 400px) {
+    header img:nth-child(3) {
+        display: none;
+    }
 }
