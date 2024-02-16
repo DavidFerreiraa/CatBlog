@@ -18,3 +18,29 @@ body {
     font-weight: 400;
     font-size: 1.6rem;
 }
+
+#app {
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "main main aside"
+    "main main aside"
+    "footer footer footer"
+    ;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
