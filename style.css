@@ -7,6 +7,7 @@
 :root{
     font-size: 62.5%;
 
+    --icons-size: 4rem;
     --color-blue-300: #387E96;
     --color-blue-700: #065E7C;
     --color-black: #202024;
@@ -48,14 +49,47 @@ header {
 }
 
 header img {
-    max-width: 4rem;
-    max-height: 4rem;
+    max-width: var(--icons-size);
+    max-height: var(--icons-size);
     border-radius: 50%;
     object-fit: cover;
 }
 
 main {
     grid-area: main;
+    object-fit: cover;
+}
+
+img {
+    width: 100vw;
+    height: 21rem;
+}
+
+.describe {
+    padding: 2.2rem 3.1rem;
+}
+
+main .describe-btn {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.describe-btn button {
+    width: var(--icons-size);
+    height: var(--icons-size);
+    background-color: transparent;
+    border: none;
+}
+
+button img {
+    width: var(--icons-size);
+    height: var(--icons-size);
+}
+
+main h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    letter-spacing: 160%;
 }
 
 aside {
